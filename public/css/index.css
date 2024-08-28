@@ -1,0 +1,139 @@
+body {
+    background-color: #FEFAE0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/*Nav bar, hover and dropdown menu*/
+nav {
+    background-color: #283618;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #DDA15E !important;
+    text-decoration: underline;
+}
+
+.custom-navbar .dropdown-item:hover {
+    background-color: #DDA15E;
+    text-decoration: underline;
+}
+
+.custom-navbar .dropdown-menu {
+    background-color: #283618;
+    border: none;
+}
+
+.custom-navbar .dropdown-item {
+    color: #ffffff;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+/*---------nav---------------------*/
+
+footer {
+    background-color: #283618;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.testimonials {
+    background-color: #606C38;
+}
+
+.custom-btn {
+    background-color: #DDA15E;
+}
+
+.custom-btn:hover {
+    background-color: #BC6C25;
+}
+
+
+.custom-input:focus, 
+.custom-textarea:focus, 
+.custom-checkbox:focus {
+    border-color: #ceab84; 
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 0px 4px #dac9b6;
+}
+
+.custom-checkbox:checked {
+    background-color: #DDA15E; 
+    border-color: #DDA15E;
+}
+
+/* #section .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#section .card-body {
+    flex: 1 1 auto;
+} */
+
+
+/*Carousel*/
+.carousel-item {
+    height: 500px;
+    background-color: #000;
+    position: relative;
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+.carousel-indicators button {
+    background-color: #FEFAE0;
+    border: none;
+}
+/*------Carousel---------*/
+
+
+/*Card*/
+.card-body {
+    background-color: #FEFAE0;
+}
+
+
+.star-rating {
+    font-size: 1.5rem;
+    color: #ffcc00;
+}
+
+.star-rating .fa-star,
+.star-rating .fa-star-half-alt {
+    margin-right: 0.1rem;
+}
+
+.star-rating .fa-star {
+    color: #ffcc00;
+}
+
+.star-rating .fa-star-half-alt {
+    color: #ffcc00;
+}
+
+.star-rating .fa-star.empty {
+    color: #FEFAE0;
+}
+/*-----------Card--------------*/
+
+/*      about */
+
+/*  ----about */
+

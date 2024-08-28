@@ -1,0 +1,62 @@
+<main>
+    <div class="text-center mt-4">
+        <h1>Testimonial</h1>
+    </div>
+    <section class="container mt-4">
+        <div>
+            <h2 class="text-center">Latest Reviews</h2>
+        </div>
+        <div>
+            <% 
+                let index = 0;
+                while (index < 3) { 
+                    const endIndex = Math.min(index + 3, testimonials.length); 
+                %>
+                    <div class="row d-flex">
+                        <% for (let i = index; i < endIndex; i++) { 
+                            const testimonial = testimonials[i]; %>
+                            <%- include('templates/card', {
+                                title: testimonial.TES_CLIENT_NAME,
+                                subtitle: testimonial.TES_TOUR_NAME,
+                                text: testimonial.TES_COMMENT,
+                                rating: testimonial.TES_RATING
+                            }) %>
+                        <% } %>
+                    </div>
+                    <% 
+                    index = endIndex; 
+                } 
+            %>
+        </div>
+    </section>
+
+    <section id = "" class="container-fluid mt-5 py-5 testimonials">
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1">
+                <h2 class="text-center mb-4">All Reviews</h2>
+                <div>
+                    <% 
+                        index = 0;
+                        while (index < testimonials.length) { 
+                            const endIndex = Math.min(index + 3, testimonials.length); 
+                        %>
+                            <div class="row d-flex">
+                                <% for (let i = index; i < endIndex; i++) { 
+                                    const testimonial = testimonials[i]; %>
+                                    <%- include('templates/card', {
+                                        title: testimonial.TES_CLIENT_NAME,
+                                        subtitle: testimonial.TES_TOUR_NAME,
+                                        text: testimonial.TES_COMMENT,
+                                        rating: testimonial.TES_RATING
+                                    }) %>
+                                <% } %>
+                            </div>
+                            <% 
+                            index = endIndex; 
+                        } 
+                    %>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
