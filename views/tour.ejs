@@ -1,11 +1,77 @@
 <main>
+    <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="0" class="active" ></button>
+            <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="1" ></button>
+            <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="2" ></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/beachAdventure.png" class="d-block w-100" alt="Beach Adventure">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Beach Adventure</h5>
+                    <p>Explore the beautiful beaches with us.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/mountainAdventure.png" class="d-block w-100" alt="Mountain Adventure">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Mountain Adventure</h5>
+                    <p>Discover the thrill of montain adventures.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/cityAdventure.png" class="d-block w-100" alt="City Adventure">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>City Adventure</h5>
+                    <p>Experience the vibrancy of city life.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" ></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
     <section class="container mt-4">
-        <h1><%= title %></h1>
-        <p><%= description %></p>
-        <p><%= cost %></p>
-        <p><%= duration %></p>
-        <p><%= locations %></p>
-        <p><%= services %></p>
-
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h3><%= title %></h3>
+                <p>
+                    <%= description %>
+                </p>
+                <p>
+                    This tour has a cost of <strong><%= cost %> AU$</strong>
+                </p>
+                <p>
+                    This tour has a duration of <strong><%= duration %> Days</strong>
+                </p>
+                <p>
+                    This tour include visiting:
+                </p>
+                <ul>
+                    <% locations.forEach(function(loc) { %>
+                        <li><%= loc %></li>
+                    <% }); %>
+                </ul>
+                <p>
+                    Services included are:
+                </p>
+                <ul>
+                    <% services.forEach(function(serv) { %>
+                        <li><%= serv %></li>
+                    <% }); %>
+                </ul>
+                
+            </div>
+            <div class="col-lg-6">   
+                <img src="/images/<%= title%>Adventure.png" alt="Group Photo" class="img-fluid">
+            </div>
+        </div>
     </section>
 </main>
